@@ -107,7 +107,14 @@
                             </p>
                         </a>
             </li>
-
+            <li class="nav-item">
+                        <a href="{{ route('loans.index') }}" class="nav-link">
+                            <i class="bi bi-laptop nav-icon text-warning mr-2"></i>
+                            <p>
+                                {{ __('Loan-Manage') }}
+                            </p>
+                        </a>
+            </li>
                     
                 </ul>
             </li>

@@ -175,6 +175,34 @@ CREATE TABLE `job_batches` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `loans`
+--
+
+CREATE TABLE `loans` (
+  `id` int(11) NOT NULL,
+  `loan_code` varchar(50) NOT NULL,
+  `loan_type` varchar(100) NOT NULL,
+  `loan_interest_rate` decimal(5,2) NOT NULL,
+  `active` tinyint(1) NOT NULL DEFAULT 1,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `deleted_at` datetime DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `loans`
+--
+
+INSERT INTO `loans` (`id`, `loan_code`, `loan_type`, `loan_interest_rate`, `active`, `created_at`, `deleted_at`, `updated_at`) VALUES
+(1, 'lc001', 'vehicle loan', 20.00, 1, '2025-10-31 10:37:44', NULL, '2025-11-01 05:07:47'),
+(2, 'lc002', 'home loan', 8.50, 0, '2025-10-31 10:37:44', NULL, '2025-11-01 05:07:47'),
+(3, 'lc003', 'education loan', 5.00, 1, '2025-10-31 10:37:44', NULL, '2025-11-01 05:07:47'),
+
+
+-- --------------------------------------------------------
+
+
+--
 -- Table structure for table `memberships`
 --
 

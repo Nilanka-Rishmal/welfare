@@ -20,6 +20,8 @@ use App\Http\Controllers\dashboardController;
 use App\Http\Controllers\purchaseOrderController;
 use App\Http\Controllers\ItemLoanController;
 use App\Http\Controllers\MembershipController;
+use App\Http\Controllers\LoanController;
+
 
 Route::get('/', function () {
     return view('auth.login'); // This is your login page.
@@ -90,6 +92,11 @@ Route::get('/welfares/{id}/toggle-status', [WelfareController::class, 'toggleSta
 // Define the Supply route
 Route::resource('supplys', SupplyController::class);
 Route::get('/supplys/{id}/toggle-status', [SupplyController::class, 'toggleStatus'])->name('supplys.toggle-status');
+
+// Define the Loan route
+Route::resource('loans', LoanController::class);
+Route::get('/loans/{id}/toggle-status', [LoanController::class, 'toggleStatus'])->name('loans.toggle-status');
+
 
 // Define the Item route
 Route::resource('items', ItemController::class);
