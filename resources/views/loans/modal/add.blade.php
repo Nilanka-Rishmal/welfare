@@ -5,7 +5,7 @@
             <!-- Modal Header -->
             <div class="modal-header bg-dark text-white">
                 <h5 class="m-0 font-weight-bold">{{ __('Add New Loan') }}</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
             </div>
 
             <!-- Modal Body -->
@@ -13,7 +13,7 @@
                 <form method="POST" action="{{ route('loans.store') }}" enctype="multipart/form-data" novalidate>
                     @csrf
 
-                    <!-- Loan Name -->
+                    <!-- Loan Code -->
                     <div class="mb-3">
                         <label for="loan_code" class="form-label">{{ __('Loan Code') }}</label>
                         <input type="text" name="loan_code" id="loan_code"
@@ -50,7 +50,7 @@
                     <!-- Modal Footer -->
                     <div class="modal-footer">
                         <button type="submit" class="btn btn-primary">{{ __('Add Loan') }}</button>
-                        <button type="button" class="btn btn-warning" data-bs-dismiss="modal">{{ __('Back') }}</button>
+                        <button type="button" class="btn btn-warning" data-dismiss="modal">{{ __('Back') }}</button>
                     </div>
                 </form>
             </div>
@@ -61,8 +61,8 @@
     @if ($errors->any())
         <script>
             document.addEventListener('DOMContentLoaded', function() {
-                // Bootstrap 5 way to show modal
-                const loanModal = new bootstrap.Modal(document.getElementById('loanModalCreate'));
+                const loanModalEl = document.getElementById('ModalLoanCreate');
+                const loanModal = new bootstrap.Modal(loanModalEl);
                 loanModal.show();
             });
         </script>

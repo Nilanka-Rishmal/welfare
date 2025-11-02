@@ -91,7 +91,7 @@
         <div class="modal-content">
             <div class="modal-header bg-dark text-white">
                 <h5 class="modal-title">{{ __('Edit Loan') }}</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                <button type="button" class="btn-close" data-dismiss="modal"></button>
             </div>
             <div class="modal-body">
                 <form id="editLoanForm" method="POST">
@@ -118,7 +118,7 @@
 
                     <div class="modal-footer">
                         <button type="submit" class="btn btn-primary">{{ __('Update Loan') }}</button>
-                        <button type="button" class="btn btn-warning" data-bs-dismiss="modal">{{ __('Back') }}</button>
+                        <button type="button" class="btn btn-warning" data-dismiss="modal">{{ __('Back') }}</button>
                     </div>
                 </form>
             </div>
